@@ -6,5 +6,10 @@ module.exports = function(environment) {
     environment
   };
 
+  if (environment === 'production') {
+    ENV.rootURL = '/sierpinski-glimmer';
+    ENV.locationType = 'hash';
+  }
+
   return ENV;
 };
