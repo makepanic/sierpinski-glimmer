@@ -1,0 +1,15 @@
+{{#if (lte @s 25)}}
+  <Dot
+    @x={{sub @x 12.5}}
+    @y={{sub @y 12.5}}
+    @size=25
+  >{{yield}}</Dot>
+{{else}}
+  {{#with (div @s 2) as |s|}}
+    <div>
+      <SierpinskiTriangle @x={{@x}} @y={{sub @y (div s 2)}} @s={{s}}>{{yield}}</SierpinskiTriangle>
+      <SierpinskiTriangle @x={{sub @x s}} @y={{add @y (div s 2)}} @s={{s}}>{{yield}}</SierpinskiTriangle>
+      <SierpinskiTriangle @x={{add @x s}} @y={{add @y (div s 2)}} @s={{s}}>{{yield}}</SierpinskiTriangle>
+    </div>
+  {{/with}}
+{{/if}}

@@ -1,1 +1,10 @@
-<div><h1>Welcome to Glimmer!</h1></div>
+<h1>Glimmer Example</h1>
+<div id="container">
+  Naive dummy app that renders a <a href="https://en.wikipedia.org/wiki/Sierpinski_triangle">Sierpinski triangle</a> as a simple "benchmark".<br>
+  Created out of curiosity on how glimmer compares to <a href="https://medium.com/@marcisbee/how-i-built-super-fast-js-framework-faster-than-react-ea99f0d03150">other implementations</a>.<br>
+  <small>This is a quick implementation and has some implementation differences.</small>
+</div>
+
+<div class="containerStyle" style={{style}}>
+  <SierpinskiTriangle @x={{0}} @y={{0}} @s={{1000}}>{{seconds}}</SierpinskiTriangle>
+</div>
