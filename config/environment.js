@@ -7,7 +7,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'production') {
-    ENV.rootURL = '/sierpinski-glimmer';
+    ENV.rootURL = '/sierpinski-glimmer/';
     ENV.locationType = 'hash';
   }
 
